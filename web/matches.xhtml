@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                template="./template/template.xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:f="http://xmlns.jcp.org/jsf/core"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+
+    <ui:define name="content">
+        <h:form prependId="false">
+
+            <h3>Export Page Data Only</h3>
+            <p:commandLink ajax="false">
+                <p:graphicImage name="/images/Excel-icon.png" />
+                <p:dataExporter type="xls" target="leagueID leagueID2" fileName="league" />
+            </p:commandLink>
+
+            <p:commandLink ajax="false">
+                <p:graphicImage name="images/Adobe-PDF-Document-icon.png" />
+                <p:dataExporter type="pdf" target="leagueID leagueID2" fileName="league"/>
+            </p:commandLink>
+
+            <p:dataTable id="leagueID" value="#{leagueMB.getMatch(leagueMB.league.groups.get(0))}" var="match" rowIndexVar="indx" styleClass="table"> 
+                <p:columnGroup type="header">
+                    <p:row>
+                        <c:forEach items="#{leagueMB.league.groups}" var="xx">
+                            <p:column  headerText="#{xx.number}" />
+                        </c:forEach>
+                    </p:row>
+
+                </p:columnGroup>
+
+                <p:columns value="#{leagueMB.league.groups}" var="gr2">
+                    <h:outputText value="#{leagueMB.getMatch(gr2).get(indx)}" />
+                </p:columns>
+            </p:dataTable>
+            
+             <p:dataTable id="leagueID2" value="#{leagueMB.getMatch(leagueMB.league.groups.get(0))}" var="match" rowIndexVar="indx" styleClass="table"> 
+                <p:columnGroup type="header">
+                    <p:row>
+                        <c:forEach items="#{leagueMB.league.groups}" var="xx">
+                            <p:column  headerText="#{xx.number}" />
+                        </c:forEach>
+                    </p:row>
+
+                </p:columnGroup>
+
+                <p:columns value="#{leagueMB.league.groups}" var="gr2">
+                    <h:outputText value="#{leagueMB.getMatch(gr2).get(indx)}" />
+                </p:columns>
+            </p:dataTable>
+        </h:form>
+
+
+    </ui:define>
+
+</ui:composition>

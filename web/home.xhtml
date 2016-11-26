@@ -1,0 +1,148 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                template="./template/template.xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+                xmlns:f="http://xmlns.jcp.org/jsf/core"
+                xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:p="http://primefaces.org/ui">
+
+    <ui:define name="middleHeader">        
+        <h:form enctype="multipart/form-data">
+            <p:messages id="messages" showDetail="true" autoUpdate="true" closable="true" />
+
+            <p:fileUpload value="#{leagueMB.file}" mode="simple"/>
+
+            <p:commandButton value="Submit" ajax="false" actionListener="#{leagueMB.upload}" disabled="false" />
+        </h:form>
+    </ui:define>
+    <ui:define name="content">
+       	<!-- banner -->
+        <div class="banner-slider">
+            <!-- banner Slider starts Here -->
+
+            <script>
+                // You can also use "$(window).load(function() {"
+                $(function () {
+                    // Slideshow 4
+                    $("#slider3").responsiveSlides({
+                        auto: true,
+                        pager: true,
+                        nav: false,
+                        speed: 500,
+                        namespace: "callbacks",
+                        before: function () {
+                            $('.events').append("<li>before event fired.</li>");
+                        },
+                        after: function () {
+                            $('.events').append("<li>after event fired.</li>");
+                        }
+                    });
+
+                });
+            </script>
+            <!--//End-slider-script -->
+            <div  id="top" class="callbacks_container">
+                <ul class="rslides" id="slider3">
+                    <li>
+                        <div class="banner"> </div>
+                    </li>
+                    <li>
+                        <div class="banner-img"> </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- //banner -->
+        <!-- how -->
+        <div class="how">
+            <!-- container -->
+            <div class="container">
+                <div class="how-top-grids">
+                    <div class="col-md-7 how-left">
+                        <h3>How the people like to play</h3>
+                        <h:graphicImage name="images/4.jpg" alt="img"/>
+
+                        <a class="play-icon popup-with-zoom-anim" href="#small-dialog">
+                            <span> </span>
+                        </a>
+
+                        <div id="small-dialog" class="mfp-hide">
+                            <iframe src="//player.vimeo.com/video/37369607" frameborder="0"></iframe>
+                        </div>
+
+                        <h4>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                        </h4>
+                        <p>when an unknown printer took a galley of type and scrambled it to make a type specimen
+                            book. It has survived not only five centuries, but also the leap into electronic typesetting,
+                            remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset 
+                            heets containing Lorem Ipsum passages, and more recently with desktop publishing software 
+                            like Aldus PageMaker including versions of Lorem Ipsum.
+                        </p>
+                    </div>
+                    <div class="col-md-5 how-right">
+                        <h3>Tournament Dates</h3>
+                        <div class="tournament">
+                            <div class="how-right-left">
+                                <h:graphicImage name="images/5.jpg" alt="img"/>
+                            </div>
+                            <div class="how-right-right">
+                                <h4>Aug 12</h4>
+                                <p>Lorem Ipsum is simply dummy text 
+                                    of the printing and typesetting industry.
+                                    Lorem Ipsum has been the industry's
+                                    dummy text ever since the 1500s,
+                                </p>
+                                <div class="more">
+                                    <a href="single.html">MORE</a>
+                                </div>
+                            </div>
+                            <div class="clearfix"> </div>
+                        </div>
+                        <div class="tournament t-middle">
+                            <div class="how-right-left">
+                                <h:graphicImage name="images/6.jpg" alt="img"/>
+                            </div>
+                            <div class="how-right-right">
+                                <h4>Aug 12</h4>
+                                <p>Lorem Ipsum is simply dummy text 
+                                    of the printing and typesetting industry.
+                                    Lorem Ipsum has been the industry's
+                                    dummy text ever since the 1500s,
+                                </p>
+                                <div class="more">
+                                    <a href="single.html">MORE</a>
+                                </div>
+                            </div>
+                            <div class="clearfix"> </div>
+                        </div>
+                        <div class="tournament t-middle">
+                            <div class="how-right-left">
+                                <h:graphicImage name="images/7.jpg" alt="img"/>
+
+                            </div>
+                            <div class="how-right-right">
+                                <h4>Aug 12</h4>
+                                <p>Lorem Ipsum is simply dummy text 
+                                    of the printing and typesetting industry.
+                                    Lorem Ipsum has been the industry's
+                                    dummy text ever since the 1500s,
+                                </p>
+                                <div class="more">
+                                    <a href="single.html">MORE</a>
+                                </div>
+                            </div>
+                            <div class="clearfix"> </div>
+                        </div>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+            </div>
+            <!-- //container -->
+        </div>
+        <!-- //how -->
+    </ui:define>
+
+</ui:composition>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<league>
+    <group number="1">
+        <team name="a"/>
+        <team name="b"/>
+        <team name="c"/>
+        <team name="d"/>
+    </group>
+    <group number="2">
+        <team name="e"/>
+        <team name="f"/>
+        <team name="g"/>
+        <team name="h"/>
+    </group>
+</league>

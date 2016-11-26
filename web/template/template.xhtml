@@ -1,0 +1,216 @@
+<?xml version='1.0' encoding='UTF-8' ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <title>League</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="keywords" content="Forward Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+              Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+        <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+
+        <h:outputStylesheet name="css/style.css"/>
+        <h:outputStylesheet name="css/bootstrap.css"/>
+
+        <!-- pop-up-box -->
+        <h:outputScript name="js/modernizr.custom.min.js"/>
+        <h:outputStylesheet name="css/popuo-box.css"/>
+
+        <!--//pop-up-box -->
+        <!-- js -->
+        <h:outputScript name="js/jquery.min.js"/>
+        <h:outputScript name="js/responsiveslides.min.js"/>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+        <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+        <!-- js -->
+        <!-- start-smoth-scrolling -->
+        <h:outputScript name="js/move-top.js"/>
+        <h:outputScript name="js/easing.js"/>
+        <script type="text/javascript">
+            jQuery(document).ready(function ($) {
+                $(".scroll").click(function (event) {
+                    event.preventDefault();
+                    $('html,body').animate({scrollTop: $(this.hash).offset().top}, 1000);
+                });
+            });
+        </script>
+    </h:head>
+
+    <h:body>
+        <div id="top">
+            <ui:insert name="header">
+                <!-- header -->
+                <div class="header">
+                    <div class="header-top">
+                        <!-- container -->
+                        <div class="container">
+                            <div class="header-top-left">
+                                <ul>
+                                    <li><a href="#">Career</a></li>      
+                                    <li><a href="#">Professionals</a></li>       
+                                    <li><a href="#">News</a></li>     
+                                    <li><a href="#">Individuals</a></li>
+                                </ul>
+                            </div>
+                            <div class="header-top-right">
+                                <form>
+                                    <input type="text" placeholder=" " required=""/>
+                                    <input type="submit" value=" "/>
+                                    <div class="clearfix"> </div>
+                                </form>
+                            </div>
+                            <div class="clearfix"> </div>
+                        </div>
+                        <!-- //container -->
+                    </div>
+                </div>
+
+
+                <div class="header-middle">
+                    <!-- container -->
+                    <div class="container">
+                        <div class="header-middle-logo">
+                            <h:outputLink value="home.xhtml">League</h:outputLink>
+
+                        </div>
+                        <div class="header-middle-right">
+                            <ui:insert name="middleHeader"> 
+                                <div class="phone">
+                                    <span> </span>
+                                    <ul>
+                                        <li class="gray">Phone</li>
+                                        <li>+1 234 876 0987 (524 House)</li>
+                                        <li>+1 234 876 0988 (254 Shop)</li>
+                                    </ul>
+                                    <div class="clearfix"> </div>
+                                </div>
+                                <div class="location">
+                                    <span> </span>
+                                    <ul>
+                                        <li class="gray">Address</li>
+                                        <li>cape town, georgia,</li>
+                                        <li>Newyork</li>
+                                    </ul>
+                                </div>
+                            </ui:insert> 
+                            <div class="clearfix"> </div>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+                    <!-- //container -->
+                </div>
+
+            </ui:insert>
+
+
+            <ui:insert name="menu">
+                <div class="top-nav">
+                    <!-- container -->
+                    <div class="container">
+                        <span class="menu">MENU</span>
+                        <ul class="nav1">
+                            <li><h:outputLink value="home.xhtml">League</h:outputLink></li>  
+                            <li><h:outputLink value="matches.xhtml">Matches</h:outputLink></li>   
+                              
+                            <div class="clearfix"> </div>
+                        </ul>
+                        <!-- script-for-menu -->
+                        <script>
+                            $("span.menu").click(function () {
+                                $("ul.nav1").slideToggle(300, function () {
+                                    // Animation complete.
+                                });
+                            });
+
+                        </script>
+                        <!-- /script-for-menu -->
+                    </div>
+                    <!-- //container -->
+                </div>
+                <div class="blue"> </div>
+
+                <!-- //header -->
+            </ui:insert>
+        </div>
+
+        <div id="content" class="center_content">
+            <ui:insert name="content">Content</ui:insert>
+        </div>
+
+        <div id="bottom">
+            <ui:insert name="footer">
+
+                <!-- footer -->
+                <div class="footer">
+                    <!-- container -->
+                    <div class="container">
+                        <div class="footer-top">
+                            <div class="footer-grids">
+                                <div class="col-md-3 f-address">
+                                    <h5>Address</h5>
+                                    <ul>
+                                        <li>756 gt globel Place,</li>
+                                        <li>CD-Road,M 07 435.</li>
+                                        <li>Telephone: +1 234 567 9871</li>
+                                        <li>FAX: +1 234 567 9871</li>
+                                        <li>E-mail : <a href="mailto:example@email.com">Example@mail.com</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6 f-address f-contact">
+                                    <h5>Stay in Touch</h5>
+                                    <form>
+                                        <input type="text" placeholder="Email address" required=""/>
+                                        <input type="submit" value="Subscribe"/>
+                                    </form>
+                                </div>
+                                <div class="col-md-3 footer-logo">
+                                    <a href="index.html">Forward</a>
+                                    <div class="footer-left">
+                                        <ul>
+                                            <li><a class="facebook" href="#"></a></li>
+                                            <li><a class="twitter" href="#"></a></li>
+                                            <li><a class="linked-in" href="#"></a></li>
+                                            <li><a class="you-tube" href="#"></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="clearfix"> </div>
+                            </div>
+                            <div class="footer-bottom">
+                                <div class="copyright">
+                                    <p>© 2015 Forward. All Rights Reserved | Design by  <a href="http://w3layouts.com/" target="_blank">W3layouts</a> </p>
+                                </div>
+                                <div class="clearfix"> </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //container -->
+                </div>
+                <!-- //footer -->
+                <script type="text/javascript">
+                    $(document).ready(function () {
+                        /*
+                         var defaults = {
+                         containerID: 'toTop', // fading element id
+                         containerHoverID: 'toTopHover', // fading element hover id
+                         scrollSpeed: 1200,
+                         easingType: 'linear' 
+                         };
+                         */
+
+                        $().UItoTop({easingType: 'easeOutQuart'});
+
+                    });
+                </script>
+            </ui:insert>
+        </div>
+
+    </h:body>
+
+</html>
